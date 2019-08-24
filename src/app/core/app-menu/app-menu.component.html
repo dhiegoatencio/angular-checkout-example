@@ -1,8 +1,15 @@
 <div class="app-menu">
 
   <div class="app-content d-flex align-items-center justify-content-between">
+
     <img src="assets/img/logo.svg">
 
+    <!--
+      Sometimes we get the menu from server,
+       so usually we added a "shimming skeleton" while the menu is loading.
+      However if the menu is fixed we have the following option:
+      https://angular.io/guide/app-shell
+    -->
     <nav>
       <ul class="d-flex">
         <li class="app-menuloading"></li>
@@ -12,7 +19,7 @@
         <li class="app-menuloading"></li>
       </ul>
     </nav>
+
   </div>
-  
 
 </div>

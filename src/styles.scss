@@ -21,6 +21,7 @@
 
 
 @import 'src/scss/colors';
+@import 'src/scss/variables';
 
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
@@ -28,10 +29,21 @@ body {
   margin: 0;
   font-family: Verdana, "Helvetica Neue", sans-serif;
   background-color: $alabaster;
+  min-height: 100vh;
 }
 
 .app-content {
   height: 100%;
   max-width: 1105px;
   margin: auto;
+}
+
+@media(max-width: $max-width) {
+  .app-content {
+    max-width: 100%;
+    margin: unset;
+  }
+  .app-hide-on-mobile {
+    display: none;
+  }
 }

@@ -1,0 +1,54 @@
+@import 'src/scss/colors';
+@import 'src/scss/variables';
+
+.bxs-checkout {
+  min-height: 596px;
+  min-width: 1024px;
+}
+
+.bxs-checkout-header {
+  background-color: $primary;
+  flex-grow: 1;
+}
+
+.bxs-checkout-card {
+  background-color: darkgray;
+  width: 365px;
+  height: 224px;
+  z-index: 1;
+
+  margin-top: 202px;
+  margin-left: -302px;
+  margin-right: -64px;
+}
+
+.bxs-checkout-content {
+  background-color: $white;
+  flex-grow: 2;
+  max-width: 672px;
+}
+
+@media(max-width: $max-width) {
+  .bxs-checkout {
+    flex-direction: column;
+    min-width: 100vw;
+    height: 100%;
+  }
+  .bxs-checkout-header {
+    height: 240px;
+    flex-grow: 0;
+  }
+  .bxs-checkout-card {
+    margin: -95px auto -77px auto;
+    /*
+    margin-top: -95px;
+    margin-bottom: -77px;
+    margin-right: 0;
+    margin-left: 0;*/
+    width: 280px;
+    height: 172px;
+  }
+  .bxs-checkout-content {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+@import 'src/scss/colors';
+
+.app-menu {
+  height: 100px;
+  margin-bottom: 65px; 
+  border-bottom: 2px #9c9c9c59 solid;
+  background-color: $white;
+}
+
+.app-menuloading {
+  width: 100px;
+  height: 18px;
+  margin-left: 35px;
+  border-radius: 5px;
+
+  background-color: $dustygray;
+  list-style-type: none;
+}

@@ -50,7 +50,18 @@ body {
   }
 }
 
+// all primary buttons
+button[color="primary"] {
+  min-width: 246px;
+  min-height: 51px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
 // material customizations
+// for this class need to be applied globally
+// otherwise the width: auto will not be considered 
 .bxs-checkout-form {
   .mat-form-field-infix {
     width: auto;

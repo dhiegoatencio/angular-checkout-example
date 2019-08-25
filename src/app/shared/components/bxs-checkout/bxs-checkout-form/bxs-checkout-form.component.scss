@@ -8,9 +8,18 @@ form {
   margin: 40px 64px 40px 128px;
 }
 
+
+.bxs-checkout-form-submitbtn {
+  align-self: flex-end;
+}
+
 @media(max-width: $max-width) {
 
   form {
     margin: 130px 40px 45px 40px;
+  }
+
+  .bxs-checkout-form-submitbtn {
+    align-self: auto;
   }
 }

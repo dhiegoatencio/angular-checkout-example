@@ -1,6 +1,10 @@
 @import 'src/scss/colors';
 @import 'src/scss/variables';
 
+h3 {
+  font: Bold 16px/20px Verdana;
+}
+
 .bxs-checkout {
   min-height: 596px;
   min-width: 1024px;
@@ -11,13 +15,17 @@
   flex-grow: 1;
 }
 
+.bxs-checkout-cardcontent {
+  z-index: 1;
+  margin: 120px -64px 0 -302px;
+}
+.bxs-checkout-cardtitle {
+  color: $white;
+}
 .bxs-checkout-card {
   background-color: darkgray;
   width: 365px;
   height: 224px;
-  z-index: 1;
-
-  margin: 202px -64px 0 -302px;
 }
 
 .bxs-checkout-content {
@@ -39,10 +47,15 @@
     flex-grow: 0;
   }
   .bxs-checkout-card {
-    margin: -95px auto -77px auto;
     width: 280px;
     height: 172px;
     min-height: 172px;
+  }
+  .bxs-checkout-cardcontent {
+    margin: -177px auto -77px auto;
+  }
+  .bxs-checkout-cardtitle {
+    justify-content: center;
   }
   .bxs-checkout-content {
     max-width: 100%;

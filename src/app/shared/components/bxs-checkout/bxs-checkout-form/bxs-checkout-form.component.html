@@ -1,54 +1,81 @@
 <form class="d-flex flex-column"
-  #cardForm="ngForm"
+  [formGroup]="cardForm"
   (ngSubmit)="handleSubmit(cardForm)">
 
   <mat-form-field>
     <input matInput
-      [(ngModel)]="card.number"
       name="number"
+      formControlName="number"
       placeholder="Número do cartão"
+      type="number"
       required>
+
+    <mat-error *ngIf="cardForm.controls.number.invalid">
+      Número de cartão inválido
+    </mat-error>
   </mat-form-field>
   
   <mat-form-field>
     <input matInput
-      [(ngModel)]="card.name"
       name="name"
+      formControlName="name"
       placeholder="Nome (igual ao cartão)"
       required>
+
+    <mat-error *ngIf="cardForm.controls.name.invalid">
+      Insira o nome completo
+    </mat-error>
   </mat-form-field>
 
   <div class="d-flex">
     <mat-form-field class="mr-3 flex-grow-1">
       <input matInput
-        [(ngModel)]="card.date"
         name="date"
         placeholder="Validade"
+        formControlName="date"
+        title="MM/YY"
+        maxlength="5"
+        minlength="5"
         required>
+
+      <mat-error *ngIf="cardForm.controls.date.invalid">
+        Data Inválida
+      </mat-error>
     </mat-form-field>
   
     <mat-form-field class="flex-grow-1">
       <input matInput
-        [(ngModel)]="card.cvv"
-        name="cardCVV"
+        name="cvv"
+        type="text"
+        maxlength="3"
+        minlength="3"
         placeholder="CVV"
+        formControlName="cvv"
         required>
+
+      <mat-error *ngIf="cardForm.controls.cvv?.invalid">
+        Código Inválida
+      </mat-error>
     </mat-form-field>      
   </div>
 
   <mat-form-field>
     <mat-label>Número de parcelas</mat-label>
     <mat-select
-      [(ngModel)]="card.installments"
-      name="installments"
+      formControlName="installments"
       required>
 
       <mat-option value="1">1x R$1.000,00 sem juros</mat-option>
       <mat-option value="2">2x R$500,00 sem juros</mat-option>
     </mat-select>
+
+    <mat-error *ngIf="cardForm.controls.installments.invalid">
+      Insira o número de parcelas
+    </mat-error>
   </mat-form-field>
 
   <button mat-flat-button
+    class="mt-4"
     color="primary"
     aria-label="Continuar com o cartão informado"
     type="submit">

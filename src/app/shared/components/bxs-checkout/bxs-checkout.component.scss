@@ -17,9 +17,7 @@
   height: 224px;
   z-index: 1;
 
-  margin-top: 202px;
-  margin-left: -302px;
-  margin-right: -64px;
+  margin: 202px -64px 0 -302px;
 }
 
 .bxs-checkout-content {
@@ -40,11 +38,6 @@
   }
   .bxs-checkout-card {
     margin: -95px auto -77px auto;
-    /*
-    margin-top: -95px;
-    margin-bottom: -77px;
-    margin-right: 0;
-    margin-left: 0;*/
     width: 280px;
     height: 172px;
   }

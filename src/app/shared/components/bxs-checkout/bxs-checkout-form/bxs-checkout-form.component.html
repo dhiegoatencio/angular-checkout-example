@@ -1,0 +1,57 @@
+<form class="d-flex flex-column"
+  #cardForm="ngForm"
+  (ngSubmit)="handleSubmit(cardForm)">
+
+  <mat-form-field>
+    <input matInput
+      [(ngModel)]="card.number"
+      name="number"
+      placeholder="Número do cartão"
+      required>
+  </mat-form-field>
+  
+  <mat-form-field>
+    <input matInput
+      [(ngModel)]="card.name"
+      name="name"
+      placeholder="Nome (igual ao cartão)"
+      required>
+  </mat-form-field>
+
+  <div class="d-flex">
+    <mat-form-field class="mr-3 flex-grow-1">
+      <input matInput
+        [(ngModel)]="card.date"
+        name="date"
+        placeholder="Validade"
+        required>
+    </mat-form-field>
+  
+    <mat-form-field class="flex-grow-1">
+      <input matInput
+        [(ngModel)]="card.cvv"
+        name="cardCVV"
+        placeholder="CVV"
+        required>
+    </mat-form-field>      
+  </div>
+
+  <mat-form-field>
+    <mat-label>Número de parcelas</mat-label>
+    <mat-select
+      [(ngModel)]="card.installments"
+      name="installments"
+      required>
+
+      <mat-option value="1">1x R$1.000,00 sem juros</mat-option>
+      <mat-option value="2">2x R$500,00 sem juros</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-flat-button
+    color="primary"
+    aria-label="Continuar com o cartão informado"
+    type="submit">
+    Continuar
+  </button>
+</form>

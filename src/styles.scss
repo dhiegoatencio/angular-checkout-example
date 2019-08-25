@@ -47,3 +47,10 @@ body {
     display: none;
   }
 }
+
+// material customizations
+.bxs-checkout-form {
+  .mat-form-field-infix {
+    width: auto;
+  }
+}

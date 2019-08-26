@@ -47,7 +47,7 @@ body {
     margin: unset;
   }
   .app-hide-on-mobile {
-    display: none;
+    display: none !important;
   }
 }
 

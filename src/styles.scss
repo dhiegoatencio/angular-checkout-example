@@ -40,6 +40,7 @@ body {
   margin: auto;
 }
 
+// mobile view
 @media(max-width: $max-width) {
   .app-content {
     max-width: 100%;

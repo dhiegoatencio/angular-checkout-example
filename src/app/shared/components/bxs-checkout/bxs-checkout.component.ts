@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'bxs-checkout',
   templateUrl: './bxs-checkout.component.html',
   styleUrls: ['./bxs-checkout.component.scss']
 })
-export class BxsCheckoutComponent implements OnInit {
+export class BxsCheckoutComponent {
+
+  @Output() backToPaymentType = new EventEmitter();
+
+  // will change based on user preference
+  paymentType = 'card';
 
   constructor() { }
 
-  ngOnInit() {
+  handleBackToPaymentType() {
+    this.backToPaymentType.emit();
   }
-
 }

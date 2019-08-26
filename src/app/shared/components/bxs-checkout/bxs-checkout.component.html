@@ -2,7 +2,7 @@
 
   <div class="bxs-checkout-header">
 
-    <a class="bxs-checkout-lg-back app-hide-on-mobile" (click)="handleBackToPaymentType()">
+    <a class="bxs-checkout-lg-back app-hide-on-mobile" (click)="handleBackToPaymentSelection()">
       <span aria-hidden="true"><</span>
       <span class="pl-3">Alterar forma de pagamento</span>
     </a>
@@ -22,7 +22,9 @@
   </div>
 
   <div class="bxs-checkout-content">
-    <bxs-checkout-form></bxs-checkout-form>
+    <bxs-checkout-form
+      (submitPayment)="handleSubmitPayment($event)">
+    </bxs-checkout-form>
   </div>
 
 </div>

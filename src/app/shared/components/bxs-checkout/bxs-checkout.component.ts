@@ -7,14 +7,19 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class BxsCheckoutComponent {
 
-  @Output() backToPaymentType = new EventEmitter();
+  @Output() submitPayment = new EventEmitter();
+  @Output() backToPaymentSelection = new EventEmitter();
 
   // will change based on user preference
   paymentType = 'card';
 
   constructor() { }
 
-  handleBackToPaymentType() {
-    this.backToPaymentType.emit();
+  handleBackToPaymentSelection() {
+    this.backToPaymentSelection.emit();
+  }
+
+  handleSubmitPayment(event) {
+    this.submitPayment.emit(event);
   }
 }

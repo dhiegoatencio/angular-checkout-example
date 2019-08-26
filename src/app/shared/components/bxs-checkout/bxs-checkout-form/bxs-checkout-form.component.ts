@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './bxs-checkout-form.component.html',
   styleUrls: ['./bxs-checkout-form.component.scss']
 })
-export class BxsCheckoutFormComponent implements OnInit {
+export class BxsCheckoutFormComponent {
+
+  @Output() submitPayment = new EventEmitter();
 
   cardForm = new FormGroup({
     number: new FormControl('', [
@@ -24,11 +26,9 @@ export class BxsCheckoutFormComponent implements OnInit {
     installments: new FormControl('', Validators.required),
   });
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  handleSubmit(cardForm) {
+  handleSubmit(cardForm: FormGroup) {
+    if (cardForm.valid) {
+      this.submitPayment.emit(cardForm.value);
+    }
   }
 }

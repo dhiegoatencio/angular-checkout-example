@@ -63,6 +63,10 @@ input.mat-input-element {
   font: 17px/22px Verdana;
   color: $mineshaft;
 }
+label.mat-form-field-label {
+  font: 17px Verdana;
+  color: $silver !important; // TODO: find a better way to apply this color
+}
 
 // material customizations
 // for this class need to be applied globally

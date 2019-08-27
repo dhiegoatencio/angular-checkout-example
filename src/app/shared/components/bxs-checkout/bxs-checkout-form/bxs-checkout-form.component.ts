@@ -17,7 +17,7 @@ export class BxsCheckoutFormComponent {
     name: new FormControl('', Validators.required),
     date: new FormControl('', [
       Validators.required,
-      Validators.pattern('(1[0-2]|0[1-9])\/(1[5-9]|2\d)'),
+      Validators.pattern('(0[1-9]|1[0-2]|[1-9])(1[8-9]|[2-9][0-9]|20[1-9][1-9])'),
     ]),
     cvv: new FormControl('', [
       Validators.required,

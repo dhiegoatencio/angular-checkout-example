@@ -35,8 +35,7 @@
           placeholder="Validade"
           formControlName="date"
           title="MM/YY"
-          maxlength="5"
-          minlength="5"
+          mask="00/00"
           required>
   
         <mat-error *ngIf="cardForm.controls.date.invalid">

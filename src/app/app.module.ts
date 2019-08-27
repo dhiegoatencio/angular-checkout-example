@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { NgxMaskModule } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { NgModule } from '@angular/core';
     BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
+    NgxMaskModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

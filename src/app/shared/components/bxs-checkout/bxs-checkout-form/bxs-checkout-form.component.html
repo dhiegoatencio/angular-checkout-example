@@ -8,7 +8,7 @@
         name="number"
         formControlName="number"
         placeholder="Número do cartão"
-        type="number"
+        mask="0000 0000 0000 0000"
         required>
   
       <mat-error *ngIf="cardForm.controls.number.invalid">

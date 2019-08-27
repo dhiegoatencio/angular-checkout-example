@@ -37,6 +37,18 @@ h3 {
   width: 365px;
   height: 250px;
 }
+.bxs-checkout-cardnumber {
+  border: 0;
+  background-color: transparent;
+  color: $white;
+  text-shadow: 0px 1px 2px #000000;
+  font: 26px "SF Pro Text";
+
+  letter-spacing: 2.50px;
+  position: absolute;
+  margin-top: 101px;
+  margin-left: 30px;
+}
 
 .bxs-checkout-content {
   background-color: $white;
@@ -61,6 +73,12 @@ h3 {
   .bxs-checkout-cardimg {
     width: 280px;
     height: 190px;
+  }
+  .bxs-checkout-cardnumber {  
+    letter-spacing: 1.52px;
+    margin-top: 75px;
+    margin-left: 22px;
+    font-size: 21px;
   }
   .bxs-checkout-cardcontent {
     margin: -177px auto -85px auto;

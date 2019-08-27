@@ -16,6 +16,10 @@
     </div>
 
     <div class="bxs-checkout-card">
+      <input [(ngModel)]="cardNumber"
+        class="bxs-checkout-cardnumber"
+        mask="0000  0000  0000  0000">
+
       <img class="bxs-checkout-cardimg" src="assets/img/card-empty.svg">
     </div>
 
@@ -23,6 +27,7 @@
 
   <div class="bxs-checkout-content">
     <bxs-checkout-form
+      (formChanges)="handleFormChanges($event)"
       (submitPayment)="handleSubmitPayment($event)">
     </bxs-checkout-form>
   </div>

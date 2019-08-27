@@ -59,6 +59,10 @@ button[color="primary"] {
   letter-spacing: 1px;
   font-size: 18px;
 }
+input.mat-input-element {
+  font: 17px/22px Verdana;
+  color: $mineshaft;
+}
 
 // material customizations
 // for this class need to be applied globally

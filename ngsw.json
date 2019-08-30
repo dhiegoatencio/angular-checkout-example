@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567205268109,
+  "timestamp": 1567205467455,
   "index": "/angular-checkout-example/index.html",
   "assetGroups": [
     {
@@ -77,7 +77,7 @@
     "/angular-checkout-example/index.html": "03df107c04b89428578e9e366f7a4789abdd44f9",
     "/angular-checkout-example/main-es2015.ad75b1d7bbeeded5247d.js": "fef96b52c1d59d44aa1a544aba51c172f74ae334",
     "/angular-checkout-example/main-es5.ad75b1d7bbeeded5247d.js": "fe6f82f4215675b6d83cac17ab8513ee3505e76f",
-    "/angular-checkout-example/manifest.webmanifest": "c4b8fcfd8c047999a2a7f2bafec43fc7b2330eba",
+    "/angular-checkout-example/manifest.webmanifest": "58f83e73fbefd5618d7850deb8e54dcebb603cdb",
     "/angular-checkout-example/polyfills-es2015.fd917e7c3ed57f282ee5.js": "e2f28c3743afd2899e140ad831df9675c233c02b",
     "/angular-checkout-example/polyfills-es5.f9fad3ad3c84e6dbdd72.js": "9ab1ff82f0d4de8ea99a7c18fa536116b571683e",
     "/angular-checkout-example/runtime-es2015.98f43c66c92d8fca2796.js": "b6a2b10213e6bf0eee2060e153eff6519fb9f0ea",

@@ -1,31 +1,43 @@
 <div class="bxs-checkout d-flex">
 
-  <div class="bxs-checkout-header">
+  <div class="bxs-checkout__header">
 
-    <a class="bxs-checkout-lg-back app-hide-on-mobile" (click)="handleBackToPaymentSelection()">
+    <a class="bxs-checkout__back-btn
+      app-hide-on-mobile"
+      (click)="handleBackToPaymentSelection()">
+
       <span aria-hidden="true"><</span>
       <span class="pl-3">Alterar forma de pagamento</span>
     </a>
   </div>
 
-  <div class="bxs-checkout-cardcontent">
+  <div class="bxs-checkout__card-content">
   
-    <div class="bxs-checkout-cardtitle d-flex">
+    <div class="bxs-checkout__card-title d-flex">
       <img src="assets/img/card-icon.svg" class="pr-3">
       <h3>Adicione um novo <br>cartão de crédito</h3>
     </div>
 
-    <div class="bxs-checkout-card">
-      <input [(ngModel)]="cardNumber"
-        class="bxs-checkout-cardnumber"
-        mask="0000  0000  0000  0000">
+    <div class="bxs-checkout__card-img
+      d-flex flex-column align-items-center">
 
-      <img class="bxs-checkout-cardimg" src="assets/img/card-empty.svg">
+      <div class="bxs-checkout__card-info
+        d-flex flex-column justify-content-between h-100">
+
+          <label class="bxs-checkout__card-number" [innerHTML]="cardNumber"></label><br>
+
+          <div class="bxs-checkout__card-footer
+            d-flex justify-content-between w-100">
+
+            <label>{{cardName}}</label>
+            <label>{{cardDate}}</label>
+          </div>
+      </div>
+
     </div>
-
   </div>
 
-  <div class="bxs-checkout-content">
+  <div class="bxs-checkout__form-wrapper">
     <bxs-checkout-form
       (formChanges)="handleFormChanges($event)"
       (submitPayment)="handleSubmitPayment($event)">

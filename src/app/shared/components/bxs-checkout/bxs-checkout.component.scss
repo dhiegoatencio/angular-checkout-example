@@ -10,11 +10,11 @@ h3 {
   min-width: 1024px;
 }
 
-.bxs-checkout-header {
+.bxs-checkout__header {
   background-color: $primary;
   flex-grow: 1;
 }
-.bxs-checkout-lg-back {
+.bxs-checkout__back-btn {
   width: 8px;
   height: 14px;
   color: $white;
@@ -25,32 +25,38 @@ h3 {
   font: 13px/22px Verdana;
 }
 
-.bxs-checkout-cardcontent {
+.bxs-checkout__card-content {
   z-index: 1;
   margin: 120px -64px 0 -302px;
 }
-.bxs-checkout-cardtitle {
+.bxs-checkout__card-title {
   color: $white;
 }
-.bxs-checkout-card,
-.bxs-checkout-cardimg {
+.bxs-checkout__card-img {
+  background: url(../../../../assets/img/card-empty.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 365px;
-  height: 250px;
+  height: 246px;
 }
-.bxs-checkout-cardnumber {
-  border: 0;
-  background-color: transparent;
+.bxs-checkout__card-number,
+.bxs-checkout__card-footer {
   color: $white;
   text-shadow: 0px 1px 2px #000000;
-  font: 26px "SF Pro Text";
-
+}
+.bxs-checkout__card-info{
+  min-width: 302px;
+}
+.bxs-checkout__card-number {
+  padding-top: 101px;
   letter-spacing: 2.50px;
-  position: absolute;
-  margin-top: 101px;
-  margin-left: 30px;
+  font: 26px "SF Pro Text";
+}
+.bxs-checkout__card-footer {
+  padding-bottom: 65px;
 }
 
-.bxs-checkout-content {
+.bxs-checkout__form-wrapper {
   background-color: $white;
   flex-grow: 2;
   max-width: 672px;
@@ -64,29 +70,30 @@ h3 {
     max-width: 100vw;
     height: 100%;
   }
-  .bxs-checkout-header {
+  .bxs-checkout__header {
     height: 240px;
     min-height: 240px;
     flex-grow: 0;
   }
-  .bxs-checkout-card,
-  .bxs-checkout-cardimg {
-    width: 280px;
-    height: 190px;
+  .bxs-checkout__card-img {
+    width: 272px;
+    height: 184px;
   }
-  .bxs-checkout-cardnumber {  
+  .bxs-checkout__card-info{
+    min-width: 212px;
+  }
+  .bxs-checkout__card-number {
     letter-spacing: 1.52px;
-    margin-top: 75px;
-    margin-left: 22px;
+    padding-top: 75px;
     font-size: 21px;
   }
-  .bxs-checkout-cardcontent {
+  .bxs-checkout__card-content {
     margin: -177px auto -85px auto;
   }
-  .bxs-checkout-cardtitle {
+  .bxs-checkout__card-title {
     justify-content: center;
   }
-  .bxs-checkout-content {
+  .bxs-checkout__form-wrapper {
     max-width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567204385018,
+  "timestamp": 1567205109472,
   "index": "/angular-checkout-example/index.html",
   "assetGroups": [
     {
@@ -56,14 +56,14 @@
   "hashTable": {
     "/angular-checkout-example/5-es2015.6e8859d925b9d0a97ba6.js": "dbe6a4cf8fbcdab352a840fe9a492b6f8149d362",
     "/angular-checkout-example/5-es5.6e8859d925b9d0a97ba6.js": "b6c440b2bc93ad03dc452aaed7d4af79ddfb7260",
-    "/angular-checkout-example/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/angular-checkout-example/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/angular-checkout-example/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/angular-checkout-example/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/angular-checkout-example/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/angular-checkout-example/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/angular-checkout-example/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/angular-checkout-example/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/angular-checkout-example/assets/icons/icon-128x128.png": "119dc3312324d81e9787d0d4947e7920311d2983",
+    "/angular-checkout-example/assets/icons/icon-144x144.png": "2c245c5b8cfa3ecc230528eb4f59012b18863540",
+    "/angular-checkout-example/assets/icons/icon-152x152.png": "9fb8c9e16a057dde91810bf62937880a368b6cb7",
+    "/angular-checkout-example/assets/icons/icon-192x192.png": "f9c828d5f6ead0d0ceedd9eac3a13a21edbb7928",
+    "/angular-checkout-example/assets/icons/icon-384x384.png": "bb4b07022ec2794372b375e62f1ec0d4c6fb1402",
+    "/angular-checkout-example/assets/icons/icon-512x512.png": "38c85d3e238034e19c0369fef435a054c79169f9",
+    "/angular-checkout-example/assets/icons/icon-72x72.png": "003808884b39dff5f8c2db7e488adc452b486b40",
+    "/angular-checkout-example/assets/icons/icon-96x96.png": "bddb4faafdb891c91766c3a214bd74e1e5173421",
     "/angular-checkout-example/assets/img/card-cvv-empty.svg": "000c5754374cf041b5e8a6ea530feb96ca7df6d4",
     "/angular-checkout-example/assets/img/card-empty.svg": "a81588b430f856a1fcdb9a28cb3618890bdc5445",
     "/angular-checkout-example/assets/img/card-icon.svg": "688961c7cc8f9c3f98c043153e74c3a072ea5aaf",

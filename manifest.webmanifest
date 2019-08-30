@@ -1,11 +1,11 @@
 {
-  "name": "angular-checkout-example",
-  "short_name": "angular-checkout-example",
+  "name": "Angular Credit Card Example",
+  "short_name": "NG Credit Card Example",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/angular-checkout-example/checkout",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

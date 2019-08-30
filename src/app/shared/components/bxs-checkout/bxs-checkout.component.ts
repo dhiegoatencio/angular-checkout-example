@@ -16,6 +16,8 @@ export class BxsCheckoutComponent {
   // will change based on user preference
   paymentType = 'card';
 
+  cvvClass: string;
+
   cardNumber: string;
   cardName: string;
   cardDate: string;
@@ -52,5 +54,13 @@ export class BxsCheckoutComponent {
 
   handleCardType(cardType: CardTypesEnum) {
     this.cardType = cardType;
+  }
+
+  handleCvvBlur() {
+    this.cvvClass = '';
+  }
+
+  handleCvvFocus() {
+    this.cvvClass = 'cvv-focus';
   }
 }

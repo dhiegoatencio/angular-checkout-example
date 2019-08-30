@@ -21,10 +21,11 @@
 
     <div class="bxs-checkout__card-img
       d-flex flex-column align-items-center"
-      [ngClass]="cardType">
+      [ngClass]="cardType + ' ' + cvvClass">
 
       <div class="bxs-checkout__card-info
-        d-flex flex-column justify-content-between h-100">
+        flex-column justify-content-between h-100"
+        [ngClass]="{'d-none': cvvClass}">
 
           <div class="bxs-checkout__card-icon" [ngClass]="cardType"></div>
 
@@ -43,6 +44,8 @@
 
   <div class="bxs-checkout__form-wrapper">
     <bxs-checkout-form
+      (eCvvFocus)="handleCvvFocus()"
+      (eCvvBlur)="handleCvvBlur()"
       (eCardType)="handleCardType($event)"
       (eChanges)="handleChanges($event)"
       (ePayment)="handlePayment($event)">

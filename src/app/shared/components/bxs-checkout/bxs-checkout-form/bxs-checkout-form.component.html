@@ -44,6 +44,8 @@
     
       <mat-form-field class="flex-grow-1">
         <input matInput
+          (focus)="handleCvvFocus()"
+          (blur)="handleCvvBlur()"
           name="cvv"
           type="text"
           mask="000"

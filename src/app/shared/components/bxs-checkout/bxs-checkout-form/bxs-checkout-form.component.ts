@@ -20,6 +20,11 @@ export class BxsCheckoutFormComponent implements OnInit {
   /** @description emits the sended payment */
   @Output() ePayment = new EventEmitter();
 
+  @Output() eCvvFocus = new EventEmitter();
+  
+  @Output() eCvvBlur = new EventEmitter();
+
+
   number =  new FormControl('', Validators.required);
 
   cardForm = new FormGroup({
@@ -54,4 +59,11 @@ export class BxsCheckoutFormComponent implements OnInit {
     }
   }
 
+  handleCvvFocus() {
+    this.eCvvFocus.emit();
+  }
+
+  handleCvvBlur() {
+    this.eCvvBlur.emit();
+  }
 }

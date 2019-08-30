@@ -40,7 +40,15 @@ h3 {
   background-image: url(../../../../assets/img/card-empty.svg);
 
   &.visa {
-    background-image: url(../../../../assets/img/visa-background.svg); 
+    background-image: url(../../../../assets/img/visa-background.svg);
+
+    &.cvv {
+      background-image: url(../../../../assets/img/visa-cvv-background.svg);
+    }
+  }
+
+  &.cvv {
+    background-image: url(../../../../assets/img/card-cvv-empty.svg);
   }
 }
 .bxs-checkout__card-icon {
@@ -62,6 +70,7 @@ h3 {
 }
 .bxs-checkout__card-info {
   min-width: 302px;
+  display: flex;
 }
 .bxs-checkout__card-number {
   padding-top: 48px;

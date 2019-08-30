@@ -19,13 +19,22 @@
       <h3>Adicione um novo <br>cartão de crédito</h3>
     </div>
 
+    <div class="bxs-checkout__card-img-cvv
+      {{cardType}}"
+      [ngClass]="{
+        'd-none': !cvvClass
+      }">
+    </div>
+  
     <div class="bxs-checkout__card-img
-      d-flex flex-column align-items-center"
-      [ngClass]="cardType + ' ' + cvvClass">
+      flex-column align-items-center
+      {{cardType}}"
+      [ngClass]="{
+        'd-none': cvvClass
+      }">
 
       <div class="bxs-checkout__card-info
-        flex-column justify-content-between h-100"
-        [ngClass]="{'d-none': cvvClass}">
+        flex-column justify-content-between h-100">
 
           <div class="bxs-checkout__card-icon" [ngClass]="cardType"></div>
 

@@ -31,24 +31,26 @@ h3 {
 .bxs-checkout__card-title {
   color: $white;
 }
+$background-animation: background-image 2s ease-out;
+.bxs-checkout__card-img-cvv,
 .bxs-checkout__card-img {
   width: 365px;
   height: 246px;
-
+  display: flex;
   background-repeat: no-repeat;
   background-size: contain;
+}
+.bxs-checkout__card-img-cvv {
+  background-image: url(../../../../assets/img/card-cvv-empty.svg);
+  &.visa {
+    background-image: url(../../../../assets/img/visa-cvv-background.svg);
+  }
+}
+.bxs-checkout__card-img {
   background-image: url(../../../../assets/img/card-empty.svg);
-
   &.visa {
     background-image: url(../../../../assets/img/visa-background.svg);
-
-    &.cvv {
-      background-image: url(../../../../assets/img/visa-cvv-background.svg);
-    }
-  }
-
-  &.cvv {
-    background-image: url(../../../../assets/img/card-cvv-empty.svg);
+    transition: $background-animation;
   }
 }
 .bxs-checkout__card-icon {
@@ -104,7 +106,8 @@ h3 {
     min-height: 240px;
     flex-grow: 0;
   }
-  .bxs-checkout__card-img {
+  .bxs-checkout__card-img,
+  .bxs-checkout__card-img-cvv {
     width: 272px;
     height: 184px;
   }

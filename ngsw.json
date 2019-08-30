@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567207254730,
+  "timestamp": 1567207718437,
   "index": "/angular-checkout-example/index.html",
   "assetGroups": [
     {
@@ -21,9 +21,7 @@
         "/angular-checkout-example/runtime-es5.98f43c66c92d8fca2796.js",
         "/angular-checkout-example/styles.ecbccab90b90a30bcffa.css"
       ],
-      "patterns": [
-        "\\/angular-checkout-example"
-      ]
+      "patterns": []
     },
     {
       "name": "assets",
@@ -92,19 +90,7 @@
   "navigationUrls": [
     {
       "positive": true,
-      "regex": "^\\/.*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+      "regex": "^\\/angular-checkout-example$"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1567206830781,
+  "timestamp": 1567207254730,
   "index": "/angular-checkout-example/index.html",
   "assetGroups": [
     {
@@ -21,7 +21,9 @@
         "/angular-checkout-example/runtime-es5.98f43c66c92d8fca2796.js",
         "/angular-checkout-example/styles.ecbccab90b90a30bcffa.css"
       ],
-      "patterns": []
+      "patterns": [
+        "\\/angular-checkout-example"
+      ]
     },
     {
       "name": "assets",

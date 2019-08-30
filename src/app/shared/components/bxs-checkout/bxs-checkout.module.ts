@@ -1,5 +1,6 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BxsCheckoutComponent } from './bxs-checkout.component';
 import { BxsCheckoutFormComponent } from './bxs-checkout-form/bxs-checkout-form.component';
 import { CommonModule } from '@angular/common';
@@ -17,13 +18,13 @@ import { NgxMaskModule } from 'ngx-mask'
   ],
   imports: [
     CommonModule,
-    MatButtonModule,
     FormsModule,
+    MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    ReactiveFormsModule,
     NgxMaskModule.forChild(),
+    ReactiveFormsModule,
   ],
   exports: [
     BxsCheckoutComponent

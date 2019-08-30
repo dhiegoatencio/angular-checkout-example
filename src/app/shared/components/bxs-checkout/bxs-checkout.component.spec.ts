@@ -1,6 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { BxsCheckoutComponent } from './bxs-checkout.component';
+import { BxsCheckoutModule } from './bxs-checkout.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 describe('BxsCheckoutComponent', () => {
   let component: BxsCheckoutComponent;
@@ -8,7 +10,11 @@ describe('BxsCheckoutComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BxsCheckoutComponent ]
+      declarations: [ ],
+      imports: [
+        BxsCheckoutModule,
+        NgxMaskModule.forRoot(),
+      ]
     })
     .compileComponents();
   }));

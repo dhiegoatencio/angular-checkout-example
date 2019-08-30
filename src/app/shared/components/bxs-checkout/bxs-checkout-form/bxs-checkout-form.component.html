@@ -10,7 +10,7 @@
         placeholder="Número do cartão"
         mask="0000 0000 0000 0000">
   
-      <mat-error *ngIf="cardForm.controls.number.invalid">
+      <mat-error *ngIf="number.invalid">
         Número de cartão inválido
       </mat-error>
     </mat-form-field>
@@ -69,7 +69,7 @@
     </mat-form-field>
 
     <button mat-flat-button
-      class="bxs-checkout-form-submitbtn mt-4"
+      class="bxs-checkout-form__submit-btn mt-4"
       color="primary"
       aria-label="Continuar com o cartão informado"
       type="submit">

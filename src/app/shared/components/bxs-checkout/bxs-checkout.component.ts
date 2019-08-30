@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 import { BxsCheckoutForm } from './bxs-checkout-form/bxs-checkout-form.interface';
+import { CardTypesEnum } from './bxs-checkout-form/card-types.enum';
 
 @Component({
   selector: 'bxs-checkout',
@@ -9,8 +10,8 @@ import { BxsCheckoutForm } from './bxs-checkout-form/bxs-checkout-form.interface
 })
 export class BxsCheckoutComponent {
 
-  @Output() submitPayment = new EventEmitter();
-  @Output() backToPaymentSelection = new EventEmitter();
+  @Output() ePayment = new EventEmitter();
+  @Output() eBackToPayments = new EventEmitter();
 
   // will change based on user preference
   paymentType = 'card';
@@ -19,9 +20,11 @@ export class BxsCheckoutComponent {
   cardName: string;
   cardDate: string;
 
+  cardType: CardTypesEnum;
+
   constructor() { }
 
-  handleFormChanges({number, date, name, cvv}: BxsCheckoutForm) {
+  handleChanges({number, date, name, cvv}: BxsCheckoutForm) {
 
     this.cardName = name;
   
@@ -39,11 +42,15 @@ export class BxsCheckoutComponent {
     this.cardDate = date.substr(0, 2) + (year && '/' + year);
   }
 
-  handleBackToPaymentSelection() {
-    this.backToPaymentSelection.emit();
+  handleBackToPayments() {
+    this.eBackToPayments.emit();
   }
 
-  handleSubmitPayment(event) {
-    this.submitPayment.emit(event);
+  handlePayment(event) {
+    this.ePayment.emit(event);
+  }
+
+  handleCardType(cardType: CardTypesEnum) {
+    this.cardType = cardType;
   }
 }

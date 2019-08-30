@@ -17,7 +17,7 @@ export class CheckoutComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleSubmitPayment(payment) {
+  handlePayment(payment) {
     this.checkoutApi
       .postPayment(payment)
       .pipe(

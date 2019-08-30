@@ -4,7 +4,7 @@
 
     <a class="bxs-checkout__back-btn
       app-hide-on-mobile"
-      (click)="handleBackToPaymentSelection()">
+      (click)="handleBackToPayments()">
 
       <span aria-hidden="true"><</span>
       <span class="pl-3">Alterar forma de pagamento</span>
@@ -40,8 +40,9 @@
 
   <div class="bxs-checkout__form-wrapper">
     <bxs-checkout-form
-      (formChanges)="handleFormChanges($event)"
-      (submitPayment)="handleSubmitPayment($event)">
+      (eCardType)="handleCardType($event)"
+      (eChanges)="handleChanges($event)"
+      (ePayment)="handlePayment($event)">
     </bxs-checkout-form>
   </div>
 

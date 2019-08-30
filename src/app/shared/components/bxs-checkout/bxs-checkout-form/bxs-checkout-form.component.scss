@@ -9,17 +9,18 @@ form {
 }
 
 
-.bxs-checkout-form-submitbtn {
+.bxs-checkout-form__submit-btn {
   align-self: flex-end;
 }
 
+// mobile view
 @media(max-width: $max-width) {
 
   form {
     margin: 130px 40px 45px 40px;
   }
 
-  .bxs-checkout-form-submitbtn {
+  .bxs-checkout-form__submit-btn {
     align-self: auto;
   }
 }

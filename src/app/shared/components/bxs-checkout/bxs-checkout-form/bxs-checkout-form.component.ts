@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 import { BxsCheckoutForm } from './bxs-checkout-form.interface';
+import { CardTypesEnum } from './card-types.enum';
 
 @Component({
   selector: 'bxs-checkout-form',
@@ -10,13 +11,19 @@ import { BxsCheckoutForm } from './bxs-checkout-form.interface';
 })
 export class BxsCheckoutFormComponent implements OnInit {
 
-  @Output() submitPayment = new EventEmitter();
-  @Output() formChanges = new EventEmitter<BxsCheckoutForm>();
+  /** @description emits the detected card */
+  @Output() eCardType = new EventEmitter<CardTypesEnum>();
+
+  /** @description emits the changes of the form */
+  @Output() eChanges = new EventEmitter<BxsCheckoutForm>();
+
+  /** @description emits the sended payment */
+  @Output() ePayment = new EventEmitter();
+
+  number =  new FormControl('', Validators.required);
 
   cardForm = new FormGroup({
-    number: new FormControl('', [
-      Validators.required,
-    ]),
+    number: this.number,
     name: new FormControl('', Validators.required),
     date: new FormControl('', [
       Validators.required,
@@ -28,13 +35,20 @@ export class BxsCheckoutFormComponent implements OnInit {
 
   ngOnInit() {
     this.cardForm.valueChanges.subscribe(
-      values => this.formChanges.emit({...values})
+      values => this.eChanges.emit({...values})
     );
+
+    this.number.valueChanges.subscribe(() => {
+      if (this.number.valid) {
+        // logic or service call do decide the card type
+        this.eCardType.emit(CardTypesEnum.VISA);
+      }
+    })
   }
 
   handleSubmit(cardForm: FormGroup) {
     if (cardForm.valid) {
-      this.submitPayment.emit(cardForm.value);
+      this.ePayment.emit(cardForm.value);
     }
   }
 

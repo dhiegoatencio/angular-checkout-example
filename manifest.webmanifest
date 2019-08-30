@@ -4,8 +4,8 @@
   "theme_color": "#DE4B4B",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/angular-checkout-example",
-  "start_url": "/angular-checkout-example",
+  "scope": "/",
+  "start_url": "/checkout",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",

@@ -8,8 +8,7 @@
         name="number"
         formControlName="number"
         placeholder="Número do cartão"
-        mask="0000 0000 0000 0000"
-        required>
+        mask="0000 0000 0000 0000">
   
       <mat-error *ngIf="cardForm.controls.number.invalid">
         Número de cartão inválido
@@ -20,8 +19,8 @@
       <input matInput
         name="name"
         formControlName="name"
-        placeholder="Nome (igual ao cartão)"
-        required>
+        oninput="this.value = this.value.toUpperCase()"
+        placeholder="Nome (igual ao cartão)">
   
       <mat-error *ngIf="cardForm.controls.name.invalid">
         Insira o nome completo
@@ -35,8 +34,7 @@
           placeholder="Validade"
           formControlName="date"
           title="MM/YY"
-          mask="00/00"
-          required>
+          mask="00/00">
   
         <mat-error *ngIf="cardForm.controls.date.invalid">
           Data Inválida
@@ -49,8 +47,7 @@
           type="text"
           mask="000"
           placeholder="CVV"
-          formControlName="cvv"
-          required>
+          formControlName="cvv">
   
         <mat-error *ngIf="cardForm.controls.cvv?.invalid">
           Código Inválida
@@ -60,10 +57,8 @@
   
     <mat-form-field>
       <mat-label>Número de parcelas</mat-label>
-      <mat-select
-        formControlName="installments"
-        required>
-  
+
+      <mat-select formControlName="installments">
         <mat-option value="1">1x R$1.000,00 sem juros</mat-option>
         <mat-option value="2">2x R$500,00 sem juros</mat-option>
       </mat-select>

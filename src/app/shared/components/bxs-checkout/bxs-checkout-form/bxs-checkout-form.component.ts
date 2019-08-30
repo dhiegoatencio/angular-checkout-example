@@ -42,6 +42,8 @@ export class BxsCheckoutFormComponent implements OnInit {
       if (this.number.valid) {
         // logic or service call do decide the card type
         this.eCardType.emit(CardTypesEnum.VISA);
+      } else {
+        this.eCardType.emit(CardTypesEnum.NONE);
       }
     })
   }

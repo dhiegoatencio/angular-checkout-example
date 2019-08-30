@@ -24,7 +24,6 @@ h3 {
   top: 40px;
   font: 13px/22px Verdana;
 }
-
 .bxs-checkout__card-content {
   z-index: 1;
   margin: 120px -64px 0 -302px;
@@ -33,24 +32,45 @@ h3 {
   color: $white;
 }
 .bxs-checkout__card-img {
-  background: url(../../../../assets/img/card-empty.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 365px;
   height: 246px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../../../assets/img/card-empty.svg);
+
+  &.visa {
+    background-image: url(../../../../assets/img/visa-background.svg); 
+  }
+}
+.bxs-checkout__card-icon {
+  width: 70px;
+  height: 23px;
+  margin-top: 35px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &.visa {
+    background-image: url(../../../../assets/img/visa.png);
+  }
 }
 .bxs-checkout__card-number,
 .bxs-checkout__card-footer {
   color: $white;
   text-shadow: 0px 1px 2px #000000;
 }
-.bxs-checkout__card-info{
+.bxs-checkout__card-info {
   min-width: 302px;
 }
 .bxs-checkout__card-number {
-  padding-top: 101px;
+  padding-top: 48px;
   letter-spacing: 2.50px;
   font: 26px "SF Pro Text";
+}
+.bxs-checkout__card-name,
+.bxs-checkout__card-date {
+  align-self: flex-end;
 }
 .bxs-checkout__card-footer {
   padding-bottom: 65px;
@@ -79,18 +99,25 @@ h3 {
     width: 272px;
     height: 184px;
   }
+  .bxs-checkout__card-icon {
+    margin-top: 27px;
+    width: 53px;
+  }
   .bxs-checkout__card-info{
-    min-width: 212px;
+    min-width: 232px;
   }
   .bxs-checkout__card-number {
     letter-spacing: 1.52px;
-    padding-top: 75px;
+    padding-top: 30px;
     font-size: 21px;
     min-height: 25px;
   }
   .bxs-checkout__card-name,
   .bxs-checkout__card-date {
     font-size: 12px;
+  }
+  .bxs-checkout__card-footer {
+    padding-bottom: 40px;
   }
   .bxs-checkout__card-content {
     margin: -177px auto -85px auto;

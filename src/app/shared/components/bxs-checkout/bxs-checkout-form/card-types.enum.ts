@@ -1,3 +1,4 @@
 export enum CardTypesEnum {
-  VISA = 'VISA'
+  VISA = 'visa',
+  NONE = ''
 }

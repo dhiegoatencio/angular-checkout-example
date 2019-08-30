@@ -20,15 +20,18 @@
     </div>
 
     <div class="bxs-checkout__card-img
-      d-flex flex-column align-items-center">
+      d-flex flex-column align-items-center"
+      [ngClass]="cardType">
 
       <div class="bxs-checkout__card-info
         d-flex flex-column justify-content-between h-100">
 
+          <div class="bxs-checkout__card-icon" [ngClass]="cardType"></div>
+
           <label class="bxs-checkout__card-number" [innerHTML]="cardNumber"></label><br>
 
           <div class="bxs-checkout__card-footer
-            d-flex justify-content-between w-100">
+            d-flex flex-grow-1 justify-content-between w-100">
 
             <label class="bxs-checkout__card-name">{{cardName}}</label>
             <label class="bxs-checkout__card-date">{{cardDate}}</label>

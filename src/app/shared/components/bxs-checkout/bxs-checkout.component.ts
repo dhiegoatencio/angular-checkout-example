@@ -16,7 +16,7 @@ export class BxsCheckoutComponent {
   // will change based on user preference
   paymentType = 'card';
 
-  cvvClass: string;
+  isCvvFocus: boolean;
 
   cardNumber: string;
   cardName: string;
@@ -57,10 +57,10 @@ export class BxsCheckoutComponent {
   }
 
   handleCvvBlur() {
-    this.cvvClass = '';
+    this.isCvvFocus = false;
   }
 
   handleCvvFocus() {
-    this.cvvClass = 'cvv-focus';
+    this.isCvvFocus = true;
   }
 }

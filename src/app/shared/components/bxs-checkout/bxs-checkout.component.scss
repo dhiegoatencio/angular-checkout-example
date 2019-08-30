@@ -26,12 +26,21 @@ h3 {
 }
 .bxs-checkout__card-content {
   z-index: 1;
+  width: 365px;
   margin: 120px -64px 0 -302px;
 }
 .bxs-checkout__card-title {
   color: $white;
 }
 $background-animation: background-image 2s ease-out;
+.bxs-checkout__card-wrapper {
+  transition: transform 1s ease-in;
+  transform-style: preserve-3d;
+
+  &.-focus-cvv {
+    transform: rotateY(180deg);
+  }
+}
 .bxs-checkout__card-img-cvv,
 .bxs-checkout__card-img {
   width: 365px;
@@ -39,8 +48,11 @@ $background-animation: background-image 2s ease-out;
   display: flex;
   background-repeat: no-repeat;
   background-size: contain;
+  position: absolute;
+  backface-visibility: hidden;
 }
 .bxs-checkout__card-img-cvv {
+  transform: rotateY(-180deg);
   background-image: url(../../../../assets/img/card-cvv-empty.svg);
   &.visa {
     background-image: url(../../../../assets/img/visa-cvv-background.svg);
@@ -105,6 +117,7 @@ $background-animation: background-image 2s ease-out;
     height: 240px;
     min-height: 240px;
     flex-grow: 0;
+    z-index: 1;
   }
   .bxs-checkout__card-img,
   .bxs-checkout__card-img-cvv {
@@ -132,7 +145,8 @@ $background-animation: background-image 2s ease-out;
     padding-bottom: 40px;
   }
   .bxs-checkout__card-content {
-    margin: -177px auto -85px auto;
+    margin: -177px auto 85px auto;
+    width: 270px;
   }
   .bxs-checkout__card-title {
     justify-content: center;

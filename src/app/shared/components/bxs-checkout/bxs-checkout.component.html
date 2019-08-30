@@ -19,36 +19,37 @@
       <h3>Adicione um novo <br>cartão de crédito</h3>
     </div>
 
-    <div class="bxs-checkout__card-img-cvv
-      {{cardType}}"
-      [ngClass]="{
-        'd-none': !cvvClass
-      }">
-    </div>
-  
-    <div class="bxs-checkout__card-img
-      flex-column align-items-center
-      {{cardType}}"
-      [ngClass]="{
-        'd-none': cvvClass
-      }">
+    <div class="bxs-checkout__card-wrapper" [ngClass]="{
+      '-focus-cvv': isCvvFocus
+    }">
 
-      <div class="bxs-checkout__card-info
-        flex-column justify-content-between h-100">
+      <!-- Cards backgrounds -->
+      <div class="bxs-checkout__card-img
+        flex-column align-items-center
+        {{cardType}}">
 
-          <div class="bxs-checkout__card-icon" [ngClass]="cardType"></div>
+        <div class="bxs-checkout__card-info
+          flex-column justify-content-between h-100">
 
-          <label class="bxs-checkout__card-number" [innerHTML]="cardNumber"></label><br>
+            <div class="bxs-checkout__card-icon" [ngClass]="cardType"></div>
 
-          <div class="bxs-checkout__card-footer
-            d-flex flex-grow-1 justify-content-between w-100">
+            <label class="bxs-checkout__card-number" [innerHTML]="cardNumber"></label><br>
 
-            <label class="bxs-checkout__card-name">{{cardName}}</label>
-            <label class="bxs-checkout__card-date">{{cardDate}}</label>
-          </div>
+            <div class="bxs-checkout__card-footer
+              d-flex flex-grow-1 justify-content-between w-100">
+
+              <label class="bxs-checkout__card-name">{{cardName}}</label>
+              <label class="bxs-checkout__card-date">{{cardDate}}</label>
+            </div>
+        </div>
       </div>
 
+      <!-- CVV backgrounds -->
+      <div class="bxs-checkout__card-img-cvv
+        {{cardType}}">
+      </div>
     </div>
+
   </div>
 
   <div class="bxs-checkout__form-wrapper">

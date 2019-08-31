@@ -3,10 +3,12 @@
   <div class="bxs-checkout__header">
 
     <a class="bxs-checkout__back-btn
-      app-hide-on-mobile"
+      app-hide-on-mobile d-flex align-items-center"
       (click)="handleBackToPayments()">
 
-      <span aria-hidden="true"><</span>
+      <span aria-hidden="true" class="d-flex">
+        <i class="material-icons">keyboard_arrow_left</i>
+      </span>
       <span class="pl-3">Alterar forma de pagamento</span>
     </a>
   </div>

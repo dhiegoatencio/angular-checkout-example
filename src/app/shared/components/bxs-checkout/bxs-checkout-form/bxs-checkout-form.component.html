@@ -49,9 +49,12 @@
           name="cvv"
           type="text"
           mask="000"
-          placeholder="CVV"
           formControlName="cvv">
-  
+
+        <mat-label>
+          CVV <mat-icon>info</mat-icon>
+        </mat-label>
+
         <mat-error *ngIf="cardForm.controls.cvv?.invalid">
           Código Inválida
         </mat-error>

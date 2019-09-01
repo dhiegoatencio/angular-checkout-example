@@ -6,6 +6,7 @@ import { BxsStepMenuModule } from '../bxs-step-menu/bxs-step-menu.module';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NgModule } from '@angular/core';
@@ -22,6 +23,7 @@ import { NgxMaskModule } from 'ngx-mask'
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     MatSelectModule,
     NgxMaskModule.forRoot({}),
     ReactiveFormsModule,

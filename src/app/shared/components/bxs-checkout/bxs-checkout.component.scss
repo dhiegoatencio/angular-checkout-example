@@ -96,10 +96,13 @@ $background-animation: background-image 2s ease-out;
   padding-bottom: 65px;
 }
 
-.bxs-checkout__form-wrapper {
+.bxs-checkout__content {
   background-color: $white;
   flex-grow: 2;
   max-width: 672px;
+}
+.bxs-checkout__menu {
+  margin: 50px 64px 0 0;
 }
 
 // mobile view
@@ -148,7 +151,7 @@ $background-animation: background-image 2s ease-out;
   .bxs-checkout__card-title {
     justify-content: center;
   }
-  .bxs-checkout__form-wrapper {
+  .bxs-checkout__content {
     max-width: 100%;
   }
 }

@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 import { BxsCheckoutForm } from './bxs-checkout-form/bxs-checkout-form.interface';
 import { CardTypesEnum } from './bxs-checkout-form/card-types.enum';
+import { StepMenu } from '../bxs-step-menu/step-menu.interface';
 
 @Component({
   selector: 'bxs-checkout',
@@ -23,6 +24,15 @@ export class BxsCheckoutComponent {
   cardDate: string;
 
   cardType: CardTypesEnum;
+
+  steps: StepMenu[] = [{
+    title: 'Carrinho',
+    defaultActive: true,
+  }, {
+    title: 'Pagamento'
+  }, {
+    title: 'Confirmação'
+  }]
 
   constructor() { }
 

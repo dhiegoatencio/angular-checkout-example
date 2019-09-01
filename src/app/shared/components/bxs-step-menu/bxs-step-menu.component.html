@@ -1,0 +1,21 @@
+<div class="bxs-step-menu d-flex">
+
+  <a class="d-flex align-items-center"
+    *ngFor="let step of steps; let last = last; let index = index">
+
+    <div class="bxs-step-menu__item
+      d-flex align-items-center"
+      (click)="handleItemClick(step)">
+
+      <i class="material-icons" *ngIf="step.defaultActive">check_circle</i>
+      <span class="bxs-step-menu__inactive" *ngIf="!step.defaultActive">
+        <span class="bxs-step-menu__item-number
+          align-items-center d-flex justify-content-around">{{index + 1}}</span>
+      </span>
+      <span class="pl-1" role="link">{{step.title}}</span>
+    </div>
+
+    <i *ngIf="!last" class="material-icons px-3">keyboard_arrow_right</i>
+  </a>
+  
+</div>

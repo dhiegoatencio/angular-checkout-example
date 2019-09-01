@@ -6,9 +6,7 @@
       app-hide-on-mobile d-flex align-items-center"
       (click)="handleBackToPayments()">
 
-      <span aria-hidden="true" class="d-flex">
-        <i class="material-icons">keyboard_arrow_left</i>
-      </span>
+      <i class="material-icons">keyboard_arrow_left</i>
       <span class="pl-3">Alterar forma de pagamento</span>
     </a>
   </div>
@@ -54,7 +52,13 @@
 
   </div>
 
-  <div class="bxs-checkout__form-wrapper">
+  <div class="bxs-checkout__content d-flex flex-column">
+
+    <div class="bxs-checkout__menu
+      app-hide-on-mobile align-self-end">
+      <bxs-step-menu [steps]="steps"></bxs-step-menu>
+    </div>
+
     <bxs-checkout-form
       (eCvvFocus)="handleCvvFocus()"
       (eCvvBlur)="handleCvvBlur()"

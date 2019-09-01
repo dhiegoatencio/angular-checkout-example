@@ -1,0 +1,23 @@
+@import 'src/scss/colors';
+
+.bxs-step-menu {
+  color: $primary;
+  font: Regular 13px/36px Verdana;
+}
+
+.bxs-step-menu__item {
+  cursor: pointer;
+}
+
+.bxs-step-menu__inactive {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 17px;
+  height: 17px;
+  margin: 0 2px 0 3px;
+}
+
+.bxs-step-menu__item-number {
+  height: 15px;
+  font-weight: 600;
+}

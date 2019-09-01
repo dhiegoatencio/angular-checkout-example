@@ -1,8 +1,8 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BxsCheckoutComponent } from './bxs-checkout.component';
 import { BxsCheckoutFormComponent } from './bxs-checkout-form/bxs-checkout-form.component';
+import { BxsStepMenuModule } from '../bxs-step-menu/bxs-step-menu.module';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -25,6 +25,7 @@ import { NgxMaskModule } from 'ngx-mask'
     MatSelectModule,
     NgxMaskModule.forChild(),
     ReactiveFormsModule,
+    BxsStepMenuModule,
   ],
   exports: [
     BxsCheckoutComponent

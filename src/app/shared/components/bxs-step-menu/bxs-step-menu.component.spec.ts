@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { BxsStepMenuComponent } from './bxs-step-menu.component';
 
@@ -22,4 +22,17 @@ describe('BxsStepMenuComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit change', () => {
+    const stubStep = 'Pagamento';
+    component.steps = ['Step 1', stubStep];
+
+    const spiedEmit = spyOn(component.eChange, 'emit');
+    component.handleItemClick(stubStep);
+    expect(
+      spiedEmit
+    ).toHaveBeenCalledWith(1);
+    
+  });
+  
 });

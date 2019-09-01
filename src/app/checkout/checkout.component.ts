@@ -23,16 +23,14 @@ export class CheckoutComponent implements OnInit {
       .pipe(
         take(1) // automatically unsubscribe
       ).subscribe(
-        res => this.handlePaymentOk(res),
+        this.handlePaymentOk,
         this.handlePaymentError
       );
   }
 
   private handlePaymentOk(res) {
-
   }
 
   private handlePaymentError(err) {
-
   }
 }

@@ -22,10 +22,17 @@ export class CheckoutComponent implements OnInit {
       .postPayment(payment)
       .pipe(
         take(1) // automatically unsubscribe
-      ).subscribe(res => {
-        // payment okay
-      }, () => {
-        // payment error
-      });
+      ).subscribe(
+        res => this.handlePaymentOk(res),
+        this.handlePaymentError
+      );
+  }
+
+  private handlePaymentOk(res) {
+
+  }
+
+  private handlePaymentError(err) {
+
   }
 }

@@ -23,7 +23,7 @@ import { NgxMaskModule } from 'ngx-mask'
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    NgxMaskModule.forChild(),
+    NgxMaskModule.forRoot({}),
     ReactiveFormsModule,
     BxsStepMenuModule,
   ],

@@ -54,9 +54,12 @@
 
   <div class="bxs-checkout__content d-flex flex-column">
 
-    <div class="bxs-checkout__menu
-      app-hide-on-mobile align-self-end">
-      <bxs-step-menu [steps]="steps"></bxs-step-menu>
+    <div class="bxs-checkout__menu">
+      <bxs-step-menu
+        [checkedIndex]="lastMenuIndex"
+        [steps]="steps"
+        (eChange)="handleStepChange($event)">
+      </bxs-step-menu>
     </div>
 
     <bxs-checkout-form

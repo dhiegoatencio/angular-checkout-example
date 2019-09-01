@@ -103,10 +103,15 @@ $background-animation: background-image 2s ease-out;
 }
 .bxs-checkout__menu {
   margin: 50px 64px 0 0;
+  align-self: flex-end;
 }
 
 // mobile view
 @media(max-width: $max-width) {
+  .bxs-checkout__menu {
+    margin: 0;
+    align-self: unset;
+  }
   .bxs-checkout {
     flex-direction: column;
     min-width: 100vw;
@@ -145,7 +150,7 @@ $background-animation: background-image 2s ease-out;
     padding-bottom: 40px;
   }
   .bxs-checkout__card-content {
-    margin: -177px auto 85px auto;
+    margin: -157px auto 85px auto;
     width: 270px;
   }
   .bxs-checkout__card-title {

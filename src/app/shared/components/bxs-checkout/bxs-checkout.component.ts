@@ -2,7 +2,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 import { BxsCheckoutForm } from './bxs-checkout-form/bxs-checkout-form.interface';
 import { CardTypesEnum } from './bxs-checkout-form/card-types.enum';
-import { StepMenu } from '../bxs-step-menu/step-menu.interface';
 
 @Component({
   selector: 'bxs-checkout',
@@ -25,14 +24,8 @@ export class BxsCheckoutComponent {
 
   cardType: CardTypesEnum;
 
-  steps: StepMenu[] = [{
-    title: 'Carrinho',
-    defaultActive: true,
-  }, {
-    title: 'Pagamento'
-  }, {
-    title: 'Confirmação'
-  }]
+  steps: string[] = ['Carrinho', 'Pagamento', 'Confirmação'];
+  lastMenuIndex = 1;
 
   constructor() { }
 
@@ -72,5 +65,9 @@ export class BxsCheckoutComponent {
 
   handleCvvFocus() {
     this.isCvvFocus = true;
+  }
+
+  handleStepChange(menuIndex) {
+    this.lastMenuIndex = menuIndex;
   }
 }

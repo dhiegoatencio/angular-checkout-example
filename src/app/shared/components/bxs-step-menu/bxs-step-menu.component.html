@@ -1,18 +1,32 @@
 <div class="bxs-step-menu d-flex">
+  
+  <div class="bxs-step-menu__item-mobile
+    align-items-center w-100">
+    <i class="bxs-setp-menu__back-btn
+      material-icons align-self-start pl-2">
+      keyboard_arrow_left
+    </i>
 
-  <a class="d-flex align-items-center"
+    <span class="bxs-step-menu__item-text
+      flex-grow-1 text-center pr-5">
+      <b>Etapa {{checkedIndex + 1}}</b> de {{steps.length}}
+    </span>
+  </div>
+
+  <a class="d-flex align-items-center
+    app-hide-on-mobile"
     *ngFor="let step of steps; let last = last; let index = index">
 
     <div class="bxs-step-menu__item
       d-flex align-items-center"
       (click)="handleItemClick(step)">
 
-      <i class="material-icons" *ngIf="step.defaultActive">check_circle</i>
-      <span class="bxs-step-menu__inactive" *ngIf="!step.defaultActive">
+      <i class="material-icons" *ngIf="checkedIndex > index">check_circle</i>
+      <span class="bxs-step-menu__inactive" *ngIf="checkedIndex <= index">
         <span class="bxs-step-menu__item-number
           align-items-center d-flex justify-content-around">{{index + 1}}</span>
       </span>
-      <span class="pl-1" role="link">{{step.title}}</span>
+      <span class="pl-1" role="link">{{step}}</span>
     </div>
 
     <i *ngIf="!last" class="material-icons px-3">keyboard_arrow_right</i>

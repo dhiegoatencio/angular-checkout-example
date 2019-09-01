@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 import { BxsCheckoutModule } from '../shared/components/bxs-checkout/bxs-checkout.module';
@@ -17,6 +18,7 @@ describe('CheckoutComponent', () => {
       declarations: [ ],
       imports: [
         CheckoutModule,
+        NoopAnimationsModule,
         NgxMaskModule.forRoot(),
       ],
       providers: [

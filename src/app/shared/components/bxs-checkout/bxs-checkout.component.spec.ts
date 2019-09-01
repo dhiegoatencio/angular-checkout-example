@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { BxsCheckoutComponent } from './bxs-checkout.component';
 import { BxsCheckoutModule } from './bxs-checkout.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('BxsCheckoutComponent', () => {
   let component: BxsCheckoutComponent;
@@ -13,6 +14,7 @@ describe('BxsCheckoutComponent', () => {
       declarations: [ ],
       imports: [
         BxsCheckoutModule,
+        NoopAnimationsModule,
         NgxMaskModule.forRoot(),
       ]
     })
